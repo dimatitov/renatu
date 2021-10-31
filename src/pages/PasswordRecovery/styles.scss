@@ -1,0 +1,23 @@
+.modal-forgot {
+  padding-top: 50px;
+  &__title {
+    font-size: 30px;
+    color: #1c1f41;
+    margin-bottom: 45px;
+  }
+  &__login-area {
+    margin-bottom: 61px;
+  }
+}
+
+.recovery-email {
+  margin-bottom: 60px !important;
+}
+
+.back {
+  align-self: flex-start;
+  padding-left: 50px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  outline: none;
+}

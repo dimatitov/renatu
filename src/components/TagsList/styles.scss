@@ -1,0 +1,15 @@
+@import 'src/styles/mixin.scss';
+
+.tags {
+  margin-bottom: 40px;
+  span {
+    color: #6dc9be;
+    @include adaptiv-fontMin(16, 10);
+    line-height: 26px;
+    letter-spacing: 0.32px;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

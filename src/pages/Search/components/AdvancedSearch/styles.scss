@@ -1,0 +1,138 @@
+@import 'src/styles/mixin.scss';
+
+.advanced-search-container {
+  width: 70vw;
+  margin: 0 auto 54px auto;
+  box-shadow: 0 30px 60px rgba(195, 197, 213, 0.2);
+  border-radius: 40px;
+  background-color: #ffffff;
+}
+
+.advanced-search-content {
+  @include adaptiv-pdgTop(72, 10);
+  @include adaptiv-pdgBottom(70, 10);
+  @include adaptiv-pdgLeft(149, 15);
+  @include adaptiv-pdgRight(149, 15);
+  display: flex;
+  flex-direction: column;
+}
+
+.advanced-search-top-container {
+  display: flex;
+  align-items: flex-end;
+}
+
+.advanced-search-top {
+  margin-bottom: 45px;
+  &__advanced-search {
+    font-family: 'SF UI Display Heavy', sans-serif;
+    color: #1c1f41;
+    letter-spacing: 1px;
+    @include adaptiv-fontMin(50, 15);
+    margin: 0;
+  }
+  &__title {
+    @include adaptiv-fontMin(30, 15);
+    color: #1c1f41;
+    letter-spacing: 0.6px;
+    text-decoration: underline;
+    margin-right: 45px;
+    padding-bottom: 7px;
+  }
+}
+
+.advanced-search-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 86px 86px minmax(86px, min-content) 86px 86px 86px;
+  gap: 24px 30px;
+  grid-template-areas:
+    'author book-name'
+    'type date'
+    'tags tags'
+    'section status'
+    'description description'
+    'rank sort';
+  margin-bottom: 50px;
+  &__author {
+    grid-area: author;
+  }
+  &__book-name {
+    grid-area: book-name;
+  }
+  &__type {
+    grid-area: type;
+  }
+  &__tags {
+    grid-area: tags;
+  }
+  &__section {
+    grid-area: section;
+  }
+  &__status {
+    grid-area: status;
+  }
+  &__description {
+    grid-area: description;
+  }
+  &__rank {
+    grid-area: rank;
+  }
+  &__sort {
+    grid-area: sort;
+  }
+}
+
+.date {
+  display: grid;
+  grid-template-columns: 1.5fr 0.5fr 1.5fr;
+  grid-template-rows: 1fr;
+  gap: 0 9px;
+  grid-template-areas: 'date-from line date-to';
+  grid-area: date;
+}
+.date-from {
+  grid-area: date-from;
+}
+.date-to {
+  grid-area: date-to;
+}
+.line {
+  grid-area: line;
+}
+
+.advanced-search {
+  &__btn {
+    align-self: flex-end;
+    padding: 22px 32px 21px 58px;
+    box-shadow: 0 13px 70px rgba(164, 173, 147, 0.46);
+    border-radius: 30px;
+    background-color: #abd25d;
+    color: #ffffff;
+    font-family: 'SF UI Display Heavy', sans-serif;
+    @include adaptiv-fontMin(16, 10);
+    text-transform: uppercase;
+    cursor: pointer;
+    background-image: url('@/assets/img/search/search.png');
+    background-repeat: no-repeat;
+    background-position: 15% center;
+  }
+}
+
+@media (min-width: 1900px) {
+  .advanced-search-container {
+    width: 65vw;
+  }
+}
+
+@media (min-width: 2100px) {
+  .advanced-search-container {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 2300px) {
+  .advanced-search-container {
+    width: 55vw;
+  }
+}

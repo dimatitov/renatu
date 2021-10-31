@@ -1,0 +1,36 @@
+@import '../../../../styles/mixin';
+
+.save-btn {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #ffffff;
+  font-family: 'SF UI Display Heavy', sans-serif;
+  @include adaptiv-fontMin(16, 10);
+  text-transform: uppercase;
+  letter-spacing: 0.32px;
+  cursor: pointer;
+  img {
+    margin-right: 10px;
+  }
+  &__pdf {
+    padding: 10px 57px 10px 41px;
+    background-color: #dd1d1d;
+    color: #ffffff;
+  }
+  &__epub {
+    padding: 10px 44px 10px 41px;
+    border: 2px solid #86b918;
+    color: #86b918;
+  }
+  &__doc {
+    padding: 10px 52px 10px 41px;
+    border: 2px solid #2a5699;
+    color: #2a5699;
+  }
+  &__fb2 {
+    padding: 10px 56px 10px 41px;
+    border: 2px solid #1c1f41;
+    color: #1c1f41;
+  }
+}

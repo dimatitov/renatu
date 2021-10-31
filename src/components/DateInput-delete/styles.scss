@@ -1,0 +1,40 @@
+@import 'src/styles/mixin.scss';
+
+.date-input {
+  position: relative;
+  input {
+    width: 100%;
+    height: 86px;
+    border-radius: 10px;
+    display: block;
+    background-color: rgba(242, 243, 250, 0.5);
+    border: 2px solid rgba(242, 243, 250, 0.5);
+    @include adaptiv-pdgLeft(30, -5);
+    padding-top: 15px;
+    color: #1c1f41;
+    @include adaptiv-fontMin(21, 14);
+    letter-spacing: 0.42px;
+    &:focus {
+      outline: none;
+      border-radius: 10px;
+      border: 2px solid #c3c5d5;
+      background-color: #ffffff;
+      transition-duration: 0.3s;
+    }
+  }
+  input[type='date']::-webkit-inner-spin-button,
+  input[type='date']::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+  label {
+    position: absolute;
+    color: #888cac;
+    @include adaptiv-fontMin(16, 10);
+    letter-spacing: 0.32px;
+    pointer-events: none;
+    left: 31px;
+    top: 17px;
+    transition: top 0.5s;
+  }
+}

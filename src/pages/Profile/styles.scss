@@ -1,0 +1,221 @@
+@import 'src/styles/mixin.scss';
+
+.profile-container {
+  width: 70vw;
+  margin: 0 auto 54px auto;
+  box-shadow: 0 30px 60px rgba(195, 197, 213, 0.2);
+  border-radius: 40px;
+  background-color: #ffffff;
+}
+
+.profile-content {
+  @include adaptiv-pdgTop(72, 10);
+  @include adaptiv-pdgBottom(70, 10);
+  @include adaptiv-pdgLeft(149, 15);
+  @include adaptiv-pdgRight(149, 15);
+}
+
+.profile-top-container {
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.profile-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 61px;
+  &__title {
+    color: #1c1f41;
+    font-family: 'SF UI Display Heavy', sans-serif;
+    @include adaptiv-fontMin(50, 20);
+    letter-spacing: 1px;
+    margin: 0 45px 0 0;
+  }
+  &__contact {
+    color: #1c1f41;
+    @include adaptiv-fontMin(30, 15);
+    text-decoration: underline;
+    letter-spacing: 0.6px;
+    padding-bottom: 7px;
+  }
+  &__change-password {
+    max-width: 200px;
+    font-family: 'SF UI Display Heavy', sans-serif;
+    @include adaptiv-fontMin(14, 10);
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: #dc525f;
+    position: relative;
+    line-height: 35px;
+    &:before {
+      content: url('@/assets/img/profile/lock.png');
+      position: absolute;
+      top: 5%;
+      right: 95%;
+      transform: translate(-100%);
+    }
+  }
+}
+
+.profile-main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.input-lastname {
+  position: relative;
+}
+
+.input-patronymic {
+  position: relative;
+}
+
+.label-patronymic {
+  position: absolute;
+  top: 15%;
+  padding-left: 36px;
+  color: #888cac;
+  @include adaptiv-fontMin(16, 10);
+  letter-spacing: 0.32px;
+}
+
+.input-firstname {
+  position: relative;
+}
+
+.label-firstname {
+  position: absolute;
+  top: 15%;
+  padding-left: 36px;
+  color: #888cac;
+  @include adaptiv-fontMin(16, 10);
+  letter-spacing: 0.32px;
+}
+
+.input-email {
+  position: relative;
+}
+
+.label-email {
+  position: absolute;
+  top: 15%;
+  padding-left: 36px;
+  color: #888cac;
+  @include adaptiv-fontMin(16, 10);
+  letter-spacing: 0.32px;
+}
+
+.input-company {
+  position: relative;
+}
+
+.label-company {
+  position: absolute;
+  top: 15%;
+  padding-left: 36px;
+  color: #888cac;
+  @include adaptiv-fontMin(16, 10);
+  letter-spacing: 0.32px;
+}
+
+.input-phone {
+  position: relative;
+}
+
+.label-phone {
+  position: absolute;
+  top: 15%;
+  padding-left: 36px;
+  color: #888cac;
+  @include adaptiv-fontMin(16, 10);
+  letter-spacing: 0.32px;
+}
+
+.grid-container {
+  margin-right: 30px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+//.user-photo {
+//  position: relative;
+//  margin-bottom: 68px;
+//  &__btn {
+//    height: 50px;
+//    width: 50px;
+//    box-shadow: 0 15px 50px rgba(4, 16, 75, 0.46);
+//    background-color: #000eb9;
+//    border-radius: 50%;
+//    cursor: pointer;
+//    position: relative;
+//    &:before {
+//      content: url('@/assets/img/profile/camera.png');
+//      position: absolute;
+//      top: 55%;
+//      left: 50%;
+//      transform: translate(-50%, -50%);
+//    }
+//  }
+//}
+
+.profile-footer {
+  display: flex;
+  flex-direction: column;
+  &__access {
+    color: #1c1f41;
+    @include adaptiv-fontMin(30, 20);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 34px;
+  }
+  &__save {
+    align-self: flex-end;
+    max-width: 209px;
+    padding: 23px 54px;
+    box-shadow: 0 13px 70px rgba(164, 173, 147, 0.46);
+    border-radius: 30px;
+    background-color: #abd25d;
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 1640px) {
+  .profile-main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .grid-container {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .profile-container {
+    width: 65vw;
+  }
+}
+
+@media (min-width: 2100px) {
+  .profile-container {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 2300px) {
+  .profile-container {
+    width: 55vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .grid-container {
+    margin-right: 0;
+  }
+}

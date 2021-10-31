@@ -1,0 +1,27 @@
+@import 'src/styles/mixin.scss';
+
+.info-rank {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    color: #1c1f41;
+    @include adaptiv-fontMin(30, 14);
+    letter-spacing: 0.6px;
+    margin-bottom: 15px;
+    text-align: end;
+  }
+}
+
+.rank-stars {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 25px;
+  align-self: flex-end;
+  &__item {
+    margin-right: 10px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

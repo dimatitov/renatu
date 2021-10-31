@@ -1,0 +1,18 @@
+@import 'src/styles/mixin.scss';
+
+.green-btn {
+  align-self: flex-end;
+  padding: 22px 41px 21px 41px;
+  box-shadow: 0 13px 70px rgba(164, 173, 147, 0.46);
+  border-radius: 30px;
+  font-family: 'SF UI Display Heavy', sans-serif;
+  background-color: #abd25d;
+  color: #ffffff;
+  @include adaptiv-fontMin(16, 10);
+  text-transform: uppercase;
+  cursor: pointer;
+  &--disabled {
+    background-color: #878a84;
+    cursor: none;
+  }
+}

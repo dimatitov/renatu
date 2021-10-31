@@ -1,0 +1,46 @@
+@import '../../styles/mixin';
+
+.form-input {
+  position: relative;
+  &__input {
+    width: 100%;
+    height: 86px;
+    border-radius: 10px;
+    display: block;
+    background-color: rgba(242, 243, 250, 0.5);
+    border: 2px solid rgba(242, 243, 250, 0.5);
+    padding-left: 30px;
+    padding-top: 15px;
+    color: #1c1f41;
+    @include adaptiv-fontMin(21, 14);
+    letter-spacing: 0.42px;
+    &:focus {
+      outline: none;
+      border-radius: 10px;
+      border: 2px solid #c3c5d5;
+      background-color: #ffffff;
+      transition-duration: 0.3s;
+    }
+    &--err {
+      border: 2px solid rgb(193, 76, 120) !important;
+    }
+  }
+  &__label {
+    position: absolute;
+    color: #888cac;
+    @include adaptiv-fontMin(16, 10);
+    letter-spacing: 0.32px;
+    pointer-events: none;
+    left: 31px;
+    top: 34px;
+    transition: top 0.5s;
+    &--top {
+      top: 17px;
+    }
+  }
+  &:hover {
+    label {
+      top: 17px;
+    }
+  }
+}

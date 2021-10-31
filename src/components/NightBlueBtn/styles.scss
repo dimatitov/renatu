@@ -1,0 +1,14 @@
+@import 'src/styles/mixin.scss';
+
+.blue-btn {
+  color: #ffffff;
+  @include adaptiv-fontMin(16, 10);
+  padding: 13px 24px 12px 21px;
+  letter-spacing: 0.32px;
+  border-radius: 20px;
+  background-color: #000eb9;
+  cursor: pointer;
+  &--disabled {
+    background-color: #a9aed7;
+  }
+}

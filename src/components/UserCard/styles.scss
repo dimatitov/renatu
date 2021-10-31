@@ -1,0 +1,129 @@
+@import 'src/styles/mixin.scss';
+
+.user-card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 70px;
+  position: relative;
+  &__photo {
+    margin-right: calc(20px + 60 * (100vw / 2560));
+    z-index: 3;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+  }
+  &:nth-child(2n) {
+    &:before {
+      content: '';
+      position: absolute;
+      left: -7.5%;
+      width: 115%;
+      height: 115%;
+      min-height: 300px;
+      border-radius: 40px;
+      background-color: #ffffff;
+      background-image: linear-gradient(to top, #f2f3fa 0%, #f9f9fd 100%);
+      z-index: 1;
+    }
+  }
+}
+
+@media (max-width: 1541px) {
+  .user-card {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    &__photo {
+      margin-bottom: 20px;
+    }
+    &--gray {
+      position: relative;
+      &:before {
+        width: 115%;
+        left: -7%;
+        min-height: 500px;
+      }
+    }
+  }
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 3;
+}
+
+.personal-data {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.user-name {
+  color: #1c1f41;
+  &__lastname {
+    @include adaptiv-fontMin(30, 15);
+    font-weight: 400;
+    letter-spacing: 0.6px;
+    margin-bottom: 6px;
+  }
+  &__other-name {
+    @include adaptiv-fontMin(21, 10);
+    letter-spacing: 0.42px;
+    margin-bottom: 16px;
+  }
+  &__rank {
+    text-align: center;
+    @include adaptiv-fontMin(14, 8);
+    padding: 9px 17px;
+    letter-spacing: 0.28px;
+    border-radius: 15px;
+    background-image: linear-gradient(to top, #fbfafb 0%, #f9f9fd 100%);
+    z-index: 1;
+  }
+}
+
+.user-phone {
+  padding-bottom: 35px;
+  &__title {
+    color: #888cac;
+    @include adaptiv-fontMin(16, 10);
+    letter-spacing: 0.32px;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+  &__number {
+    color: #1c1f41;
+    @include adaptiv-fontMin(21, 10);
+    letter-spacing: 0.42px;
+  }
+}
+
+.user-email {
+  padding-bottom: 40px;
+  &__title {
+    color: #888cac;
+    @include adaptiv-fontMin(16, 10);
+    letter-spacing: 0.32px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+  &__email {
+    color: #000eb9;
+    @include adaptiv-fontMin(21, 10);
+    text-decoration: underline;
+    letter-spacing: 0.42px;
+    cursor: pointer;
+  }
+}
+
+.user-access {
+  &__access-list {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    justify-content: space-between;
+  }
+}

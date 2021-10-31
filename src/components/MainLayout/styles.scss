@@ -1,0 +1,142 @@
+@import 'src/styles/mixin.scss';
+
+.main-container {
+  background-color: #f2f3fa;
+  background-size: 100% 100%;
+  min-height: 100vh;
+}
+
+.menu-nav {
+  padding: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.user-nav {
+  display: flex;
+  align-items: center;
+  &__buttons {
+    width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__name {
+    color: #1c1f41;
+    @include adaptiv-fontMin(21, 13);
+    letter-spacing: 0.42px;
+    border-bottom: 2px solid rgb(185, 186, 197);
+    line-height: 21px;
+  }
+}
+
+.user-control {
+  margin-right: 20px;
+  &__btn {
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    &--indents {
+      padding: 15px 16px 11px 16px;
+    }
+  }
+}
+
+.button-nav {
+  width: 70vw;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  align-items: center;
+  justify-content: space-between;
+  &__btn {
+    padding: 21px 24px 21px 64px;
+    border-radius: 35px;
+    color: #ffffff;
+    max-width: 180px;
+    font-size: calc(8px + 6 * (100vw / 2560));
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+    &:before {
+      position: absolute;
+      display: block;
+      top: 25%;
+      left: 15px;
+    }
+    &:last-child {
+      margin-left: auto;
+    }
+  }
+  &__catalog {
+    background-color: #000eb9;
+    &:before {
+      content: url('@/assets/img/main/book.png');
+    }
+  }
+  &__add {
+    background-color: #58b948;
+    &:before {
+      content: url('@/assets/img/main/add.png');
+    }
+  }
+}
+
+.logo {
+  justify-self: center;
+}
+
+.main-footer {
+  width: 70vw;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  &--blur {
+    width: 70vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    filter: blur(5px);
+  }
+}
+
+@media (min-width: 1900px) {
+  .button-nav {
+    width: 65vw;
+  }
+  .main-footer {
+    width: 65vw;
+  }
+}
+
+@media (min-width: 2100px) {
+  .button-nav {
+    width: 60vw;
+  }
+  .main-footer {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 2300px) {
+  .button-nav {
+    width: 55vw;
+  }
+  .main-footer {
+    width: 55vw;
+  }
+}
+
+@media (max-width: 1024px) {
+  .menu-nav {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 2100px) {
+  .user-nav {
+    &__name {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+@import 'src/styles/mixin.scss';
+
+.link-to-book {
+  text-decoration: none;
+  &__title {
+    margin-top: 0;
+    color: #1c1f41;
+    @include adaptiv-fontMin(30, 18);
+    letter-spacing: 0.6px;
+    text-decoration: none;
+    margin-bottom: 22px;
+  }
+}

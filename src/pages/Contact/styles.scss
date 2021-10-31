@@ -1,0 +1,34 @@
+@import 'src/styles/mixin.scss';
+
+.contact-container {
+  width: 70vw;
+  margin: 0 auto 54px auto;
+  box-shadow: 0 30px 60px rgba(195, 197, 213, 0.2);
+  border-radius: 40px;
+  background-color: #ffffff;
+}
+
+.contact-content {
+  @include adaptiv-pdgTop(72, 10);
+  @include adaptiv-pdgBottom(70, 10);
+  @include adaptiv-pdgLeft(149, 15);
+  @include adaptiv-pdgRight(149, 15);
+}
+
+@media (min-width: 1900px) {
+  .contact-container {
+    width: 65vw;
+  }
+}
+
+@media (min-width: 2100px) {
+  .contact-container {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 2300px) {
+  .contact-container {
+    width: 55vw;
+  }
+}

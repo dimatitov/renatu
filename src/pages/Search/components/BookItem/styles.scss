@@ -1,0 +1,56 @@
+@import 'src/styles/mixin.scss';
+
+.book {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.book-cover-container {
+  position: relative;
+  &__cover {
+    margin-right: 30px;
+    box-shadow: 0 24px 76px rgba(4, 16, 75, 0.46);
+    border-radius: 20px;
+    width: 169px;
+    height: 243px;
+    background-color: #1c1f41;
+  }
+  &__count-book {
+    position: absolute;
+    top: 20%;
+    right: 80%;
+    color: #1c1f41;
+    @include adaptiv-fontMin(21, 13);
+    letter-spacing: 0.42px;
+    padding: 24px 0;
+    border-radius: 50%;
+    box-shadow: 0 24px 76px rgba(4, 16, 75, 0.46);
+    background-color: #ffffff;
+    width: 70px;
+    text-align: center;
+  }
+}
+
+.book-info {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+
+.info-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 34px;
+}
+
+.info-description {
+  max-width: 922px;
+  min-width: 365px;
+  color: #1c1f41;
+  @include adaptiv-fontMin(18, 10);
+  line-height: 26px;
+  letter-spacing: 0.36px;
+  margin-bottom: 37px;
+}

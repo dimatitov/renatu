@@ -1,0 +1,42 @@
+@import 'src/styles/mixin.scss';
+
+.date-add-book {
+  position: relative;
+  background-color: rgba(242, 243, 250, 0.5);
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  &:focus {
+    outline: none;
+    border-radius: 10px;
+    transition-duration: 0.3s;
+  }
+  input {
+    background-color: rgba(242, 243, 250, 0.5);
+    display: block;
+    padding-top: 40px;
+    padding-left: 30px;
+    color: #1c1f41;
+    @include adaptiv-fontMin(21, 14);
+    letter-spacing: 0.42px;
+    border: none;
+    outline: none;
+  }
+
+  input[type='date']::-webkit-inner-spin-button,
+  input[type='date']::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+  label {
+    position: absolute;
+    color: #888cac;
+    @include adaptiv-fontMin(16, 10);
+    letter-spacing: 0.32px;
+    pointer-events: none;
+    left: 31px;
+    top: 17px;
+    transition: top 0.5s;
+    z-index: 9999;
+  }
+}

@@ -1,0 +1,80 @@
+@import '../../../../styles/mixin';
+
+.book-container {
+  width: 70vw;
+  margin: 0 auto 54px auto;
+  box-shadow: 0 30px 60px rgba(195, 197, 213, 0.2);
+  border-radius: 40px;
+  background-color: #ffffff;
+  @include adaptiv-pdgTop(72, 10);
+  @include adaptiv-pdgBottom(70, 10);
+  @include adaptiv-pdgLeft(149, 15);
+  @include adaptiv-pdgRight(149, 15);
+}
+
+.book-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  &__title {
+    color: #1c1f41;
+    @include adaptiv-fontMin(50, 25);
+    letter-spacing: 1px;
+    margin-top: 0;
+    margin-bottom: 25px;
+  }
+  &__tags {
+    max-width: 800px;
+    height: 70px;
+    color: #6dc9be;
+    @include adaptiv-fontMin(16, 10);
+    line-height: 26px;
+    letter-spacing: 0.32px;
+    span:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.book-saved {
+  max-width: 330px;
+  margin-right: 59px;
+  &__cover {
+    border-radius: 20px;
+    box-shadow: 0 30px 60px rgba(195, 197, 213, 1.2);
+    margin-bottom: 41px;
+    max-height: 500px;
+  }
+}
+
+.book-content {
+  display: flex;
+  //flex-direction: column;
+}
+
+.book-information {
+  margin-bottom: 62px;
+}
+
+.edit {
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 1900px) {
+  .book-container {
+    width: 65vw;
+  }
+}
+
+@media (min-width: 2100px) {
+  .book-container {
+    width: 60vw;
+  }
+}
+
+@media (min-width: 2300px) {
+  .book-container {
+    width: 55vw;
+  }
+}

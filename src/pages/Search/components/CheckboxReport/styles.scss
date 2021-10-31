@@ -1,0 +1,23 @@
+.settings-checkbox {
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  position: relative;
+  &:hover {
+    background-color: rgb(240, 241, 249);
+    border-radius: 10px;
+  }
+  &__setting {
+    opacity: 0;
+    position: absolute;
+  }
+  &__label {
+    align-items: center;
+    user-select: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+}

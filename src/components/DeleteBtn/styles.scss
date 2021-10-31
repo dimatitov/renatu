@@ -1,0 +1,13 @@
+@import 'src/styles/mixin.scss';
+
+.delete {
+  color: #ffffff;
+  @include adaptiv-fontMin(16, 10);
+  padding: 13px 19px 12px 20px;
+  border-radius: 20px;
+  background-color: #dc525f;
+  cursor: pointer;
+  &--disabled {
+    background-color: #a9aed7;
+  }
+}

@@ -1,0 +1,28 @@
+@import 'src/styles/mixin.scss';
+
+.add-book-rank {
+  grid-area: add-book-rank;
+  width: 100%;
+  border-radius: 10px;
+  background-color: rgba(242, 243, 250, 0.5);
+  border: 2px solid rgba(242, 243, 250, 0.5);
+  &__title {
+    color: #888cac;
+    @include adaptiv-fontMin(16, 12);
+    letter-spacing: 0.32px;
+    padding-top: 17px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    &--err {
+      color: rgb(193, 76, 120);
+    }
+  }
+  &__stars {
+    list-style: none;
+    display: flex;
+    padding-left: 30px;
+    margin-top: 0;
+    font-size: 25px;
+    padding-bottom: 10px;
+  }
+}

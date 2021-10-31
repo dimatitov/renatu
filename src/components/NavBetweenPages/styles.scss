@@ -1,0 +1,25 @@
+@import 'src/styles/mixin.scss';
+
+.first-nav-top-container {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 62px;
+}
+
+.first-nav-top {
+  &__link {
+    color: #1c1f41;
+    font-family: 'SF UI Display Heavy', sans-serif;
+    @include adaptiv-fontMin(50, 15);
+    letter-spacing: 1px;
+    margin: 0;
+  }
+  &__title {
+    margin-right: 45px;
+    color: #1c1f41;
+    @include adaptiv-fontMin(30, 15);
+    text-decoration: underline;
+    letter-spacing: 0.6px;
+    padding-bottom: 7px;
+  }
+}

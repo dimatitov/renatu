@@ -1,0 +1,18 @@
+@import '../../../../styles/mixin';
+
+.book-saved {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    font-family: 'SF UI Display Heavy', sans-serif;
+    color: #1c1f41;
+    @include adaptiv-fontMin(21, 15);
+    letter-spacing: 0.42px;
+    margin-bottom: 17px;
+  }
+  &__btn {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 10px;
+  }
+}

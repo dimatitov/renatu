@@ -1,0 +1,18 @@
+@import 'src/styles/mixin.scss';
+
+.search-type-nav {
+  display: flex;
+  align-items: flex-end;
+  &__link-title {
+    color: #1c1f41;
+    @include adaptiv-fontMin(30, 15);
+    text-decoration: underline;
+    margin: 0 30px 5px 0;
+  }
+  &__focus-title {
+    color: #1c1f41;
+    font-family: 'SF UI Display Heavy', sans-serif;
+    @include adaptiv-fontMin(50, 15);
+    margin: 0 30px 0 0;
+  }
+}

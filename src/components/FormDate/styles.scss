@@ -1,0 +1,9 @@
+@import 'src/styles/mixin.scss';
+
+.date-line {
+  width: calc(13px + 30 * (100vw / 2560));
+  height: 2px;
+  background-color: #1c1f41;
+  align-self: center;
+  justify-self: center;
+}

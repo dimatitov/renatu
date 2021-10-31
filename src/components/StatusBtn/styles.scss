@@ -1,0 +1,15 @@
+@import 'src/styles/mixin.scss';
+
+.status {
+  @include adaptiv-fontMin(16, 10);
+  color: #888cac;
+  letter-spacing: 0.32px;
+  padding: 12px 17px 12px 20px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  background-image: linear-gradient(to top, #f2f3fa 0%, #f9f9fd 100%);
+  //margin-right: 20px;
+  span {
+    color: #1c1f41;
+  }
+}

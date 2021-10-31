@@ -1,0 +1,17 @@
+@import 'src/styles/mixin.scss';
+
+.found-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__not-found {
+    @include adaptiv-fontMin(80, 60);
+    color: red;
+  }
+  &__to-back {
+    @include adaptiv-fontMin(40, 20);
+    color: black;
+  }
+}

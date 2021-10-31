@@ -1,0 +1,40 @@
+.page-control {
+  position: absolute;
+  bottom: 0;
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 400px;
+  color: #888cac;
+  cursor: pointer;
+  &__next {
+    border-radius: 30px;
+    background-color: rgba(136, 140, 172, 0.2);
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 20px 40px;
+    background-image: url('undo_right.png');
+  }
+  &__preview {
+    border-radius: 30px;
+    background-color: #aaabbc;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin-right: 10px;
+    padding: 20px 40px;
+    background-image: url('undo_left.png');
+  }
+  &__active-link {
+    background-color: rgba(136, 140, 172, 0.2);
+    color: #888cac;
+    border-radius: 50%;
+    padding: 5px 10px;
+  }
+  &__num {
+    margin-right: 10px;
+  }
+}

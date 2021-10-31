@@ -1,0 +1,22 @@
+@import 'src/styles/mixin.scss';
+
+.authors-name-container {
+  display: flex;
+  &__title {
+    margin: 0 10px 0 0;
+    //display: inline-block;
+    @include adaptiv-fontMin(18, 13);
+    color: #888cac;
+    letter-spacing: 0.36px;
+  }
+  &__names {
+    color: #1c1f41;
+    display: flex;
+    flex-direction: column;
+    @include adaptiv-fontMin(18, 13);
+    letter-spacing: 0.36px;
+    p {
+      margin: 1px 0 5px 0;
+    }
+  }
+}

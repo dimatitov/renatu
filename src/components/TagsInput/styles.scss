@@ -1,0 +1,90 @@
+@import 'src/styles/mixin.scss';
+
+div.ReactTags__tags {
+  position: relative;
+  background-color: rgba(242, 243, 250, 0.6);
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  min-height: 84px;
+  padding-left: 25px;
+  padding-top: 20px;
+  color: #1c1f41;
+  @include adaptiv-fontMin(26, 16);
+  letter-spacing: 0.42px;
+}
+
+/* Styles for the input */
+div.ReactTags__tagInput {
+  width: 100%;
+  padding-bottom: 10px;
+}
+div.ReactTags__tagInput input.ReactTags__tagInputField,
+div.ReactTags__tagInput input.ReactTags__tagInputField:focus {
+  margin: 0;
+  @include adaptiv-fontMin(24, 14);
+  width: 100%;
+  color: #1c1f41;
+  padding: 0 4px;
+  border: none;
+  background-color: rgba(242, 243, 250, 0.1);
+  outline: none;
+}
+
+input.ReactTags__tagInputField::placeholder {
+  color: #888cac;
+  @include adaptiv-fontMin(16, 12);
+  letter-spacing: 0.32px;
+  pointer-events: none;
+  left: 31px;
+  top: 34px;
+}
+
+/* Styles for selected tags */
+div.ReactTags__selected span.ReactTags__tag {
+  border: 1px solid #888cac;
+  border-radius: 5px;
+  background-color: rgba(242, 243, 250, 0.6);
+  @include adaptiv-fontMin(20, 16);
+  display: inline-block;
+  padding: 5px;
+  margin: 0 5px 5px 5px;
+  cursor: move;
+}
+div.ReactTags__selected button.ReactTags__remove {
+  color: #aaaaaa;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* Styles for suggestions */
+div.ReactTags__suggestions {
+  position: absolute;
+  top: 70%;
+}
+div.ReactTags__suggestions ul {
+  list-style-type: none;
+  box-shadow: 0.05em 0.01em 0.5em rgba(0, 0, 0, 0.2);
+  background: #c8c5c5;
+  width: 100%;
+}
+div.ReactTags__suggestions li {
+  border-bottom: 1px solid #ddd;
+  padding: 4px 10px;
+  margin: 0;
+  width: 100%;
+}
+div.ReactTags__suggestions li mark {
+  text-decoration: underline;
+  background: none;
+  font-weight: 600;
+}
+div.ReactTags__suggestions ul li.ReactTags__activeSuggestion {
+  background: #888cac;
+  cursor: pointer;
+}
+
+.tags-error {
+  border: 2px solid #c14c78 !important;
+  border-radius: 10px;
+}
